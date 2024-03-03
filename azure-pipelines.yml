@@ -7,7 +7,7 @@ pool:
 steps:
 - task: Docker@2
   inputs:
-    containerRegistry: 'exampleacr' # Use the name of your ACR
+    containerRegistry: 'mishri' 
     repository: 'exampledockerimage'
     command: 'buildAndPush'
     Dockerfile: '/Dockerfile'
@@ -15,7 +15,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'YourAzureServiceConnection'
+    azureSubscription: '1c6bc2a3-8cad-44df-a1cd-92202930946a'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
